@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Piracy Detector</title>
+    <title>Cyber Crime Division</title>
     <style>
         * {
             box-sizing: border-box;
@@ -48,7 +48,7 @@
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             line-height: 1.6;
             margin-bottom: 20px;
         }
@@ -64,41 +64,9 @@
             margin-top: 20px;
         }
 
-        .loader-container {
-            margin: 30px auto;
-            width: 140px;
-            height: 140px;
-            position: relative;
-        }
-
-        .loader {
-            width: 140px;
-            height: 140px;
-            border: 10px solid #333;
-            border-top: 10px solid red;
-            border-radius: 50%;
-            animation: spin 1.2s linear infinite;
-        }
-
-        .percent {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2rem;
-            font-weight: bold;
-            color: white;
-        }
-
-        @keyframes spin {
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.4rem;
+                font-size: 2.5rem;
             }
 
             p {
@@ -109,53 +77,21 @@
 </head>
 <body>
     <div class="box">
-        <div class="badge">MOVIE PIRACY DETECTOR</div>
-        <h1>SCANNING DEVICE...</h1>
-
+        <div class="badge">CYBER CRIME DIVISION</div>
+        <h1>YOU ARE ARRESTED</h1>
         <p>
-            Checking device for unauthorized download of
-            <span class="warning">Jananayagan</span>...
+            Your device has been flagged for illegally downloading
+            <span class="warning">Jananayagan</span>.
         </p>
-
-        <div class="loader-container">
-            <div class="loader"></div>
-            <div class="percent" id="percent">0%</div>
-        </div>
-
-        <p id="status">Fetching popcorn consumption history...</p>
-
+        <p>
+            This activity has been logged and reported to the authorities.
+        </p>
+        <p class="warning">
+            Do not close this page. Legal action is in progress.
+        </p>
         <div class="small">
-            Relax — this is just a prank.
+            Case ID: CC-2026-44719
         </div>
     </div>
-
-    <script>
-        let percent = 0;
-        const percentText = document.getElementById("percent");
-        const statusText = document.getElementById("status");
-
-        const messages = [
-            "Checking movie watchlist...",
-            "Scanning download folder...",
-            "Analyzing Jananayagan file...",
-            "Fetching popcorn consumption history...",
-            "Verifying piracy detector results..."
-        ];
-
-        const interval = setInterval(() => {
-            percent++;
-            percentText.textContent = percent + "%";
-
-            if (percent % 20 === 0) {
-                statusText.textContent = messages[Math.floor(percent / 20) - 1];
-            }
-
-            if (percent >= 100) {
-                clearInterval(interval);
-                statusText.innerHTML =
-                    "<span class='warning'>Prank complete. You got caught... by your friends.</span>";
-            }
-        }, 80);
-    </script>
 </body>
 </html>
