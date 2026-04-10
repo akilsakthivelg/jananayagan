@@ -3,35 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Important Notice</title>
+    <title>Cyber Crime Division</title>
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
-            height: 100vh;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #111;
-            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .box {
+            background: #1a1a1a;
+            border: 3px solid red;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
             text-align: center;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+            border-radius: 12px;
         }
 
-        .message {
-            font-size: 3rem;
-            font-weight: bold;
-            color: white;
-            max-width: 80%;
-            line-height: 1.4;
+        .badge {
+            font-size: 1.2rem;
+            color: #bbb;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
         }
 
-        .red {
+        h1 {
+            font-size: 4rem;
             color: red;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .warning {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+
+        .small {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="message">
-        You have been <span class="red">arrested</span> for downloading Jananayagan
+    <div class="box">
+        <div class="badge">CYBER CRIME DIVISION</div>
+        <h1>YOU ARE ARRESTED</h1>
+        <p>
+            Your device has been flagged for illegally downloading
+            <span class="warning">Jananayagan</span>.
+        </p>
+        <p>
+            This activity has been logged and reported to the authorities.
+        </p>
+        <p class="warning">
+            Do not close this page. Legal action is in progress.
+        </p>
+        <div class="small">
+            Case ID: CC-2026-44719
+        </div>
     </div>
 </body>
 </html>
